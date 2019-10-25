@@ -11,17 +11,17 @@ public class EscribirPersona {
         //Pedimos datos.
         Scanner entrada= new Scanner (System.in);
         System.out.println("Nombre");
-        String nombre=entrada.nextLine();
+        String nombre=comprobarComas(entrada.nextLine());
         System.out.println("Apellidos");
-        String apellidos=entrada.nextLine();
+        String apellidos=comprobarComas(entrada.nextLine());
         System.out.println("DNI");
-        String dni=entrada.nextLine();
+        String dni=comprobarComas(entrada.nextLine());
         System.out.println("Direccion");
-        String direccion=entrada.nextLine();
+        String direccion=comprobarComas(entrada.nextLine());
         System.out.println("Poblacion");
-        String poblacion=entrada.nextLine();
+        String poblacion=comprobarComas(entrada.nextLine());
         System.out.println("Codigo Postal");
-        String codigoPostal=entrada.nextLine();
+        String codigoPostal=comprobarComas(entrada.nextLine());
 
 
         try (FileWriter writer = new FileWriter("crearPersonas.txt",true);
@@ -31,5 +31,19 @@ public class EscribirPersona {
         } catch (IOException e) {
             System.err.format("IOException: %s%n", e);
         }
+    }
+
+    public static String comprobarComas(String f){
+        String modificat="";
+        for (int i = 0; i <f.length() ; i++) {
+            if (!(f.charAt(i)==',')){
+                modificat=modificat+f.charAt(i);
+            }
+            else {
+                modificat=modificat+'.';
+            }
+
+        }
+        return modificat;
     }
 }
