@@ -13,6 +13,7 @@ public class LeerPersona {
             String lineaInfoPersona;
             while ((lineaInfoPersona = bufferedReader.readLine())!=null){
                 infoPersona=lineaInfoPersona.split(",");
+                devolverEstadoOriginal(infoPersona);
                 listaPersonas.add(infoPersona);
             }
             for (String[] infoPersonas:listaPersonas) {
@@ -30,6 +31,25 @@ public class LeerPersona {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+    public static void devolverEstadoOriginal (String[]lista){
+        for (int i = 0; i <lista.length ; i++) {
+            String modificat="";
+            for (int j = 0; j < lista[i].length(); j++) {
+                if (lista[i].charAt(j)=='\\'){
+                    if ((j>lista[i].length())&&!(lista[i].charAt((j)+1)=='\\')){
+                        modificat=modificat+',';
+                    }
+                    else {
+                        modificat=modificat+'\\';
+                    }
+                }
+                else {
+                    modificat=modificat+lista[i].charAt(j);
+                }
+            }
+            lista[i]=modificat;
         }
     }
 }
