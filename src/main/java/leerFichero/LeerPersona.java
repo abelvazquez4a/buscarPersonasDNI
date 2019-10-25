@@ -21,9 +21,10 @@ public class LeerPersona {
                 System.out.println("-----------------------------------------");
                 System.out.println("Nombre: "+infoPersonas[0]);
                 System.out.println("Apellidos: "+infoPersonas[1]);
-                System.out.println("Direccion: "+infoPersonas[2]);
-                System.out.println("Codigo Postal: "+infoPersonas[3]);
-                System.out.println("DNI: "+infoPersonas[4]);
+                System.out.println("DNI: "+infoPersonas[2]);
+                System.out.println("Direccion: "+infoPersonas[3]);
+                System.out.println("Poblacion: "+infoPersonas[4]);
+                System.out.println("Codigo Postal: "+infoPersonas[5]);
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
