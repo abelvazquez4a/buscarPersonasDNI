@@ -1,3 +1,5 @@
 Abel Vazquez,Canto,4732746744,wwdddd,barcelona,08001.
 Juan,Perez Simon,43322234T,C/ Carmen. numero 15,Barcelona,08001
 Juan\\\,Garcia Perez,44433344H,C\\Carmen\45,Barcelona,08001
+Abel,Vázquez Canto,47327469R,C/Guardia,Barcelona,08001
+Sara,Roman López,444444444R,GUardia,Barcelona,08041

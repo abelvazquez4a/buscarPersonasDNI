@@ -36,11 +36,8 @@ public class EscribirPersona {
     public static String comprobarComas(String f){
         String modificat="";
         for (int i = 0; i <f.length() ; i++) {
-            if (f.charAt(i)=='\\'){
-                modificat=modificat+'\\'+'\\';
-            }
-            else if (f.charAt(i)==',') {
-                modificat=modificat+'\\';
+            if (f.charAt(i)==',') {
+                modificat=modificat+'.';
             }
             else {
                 modificat=modificat+f.charAt(i);
